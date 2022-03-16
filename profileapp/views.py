@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
+import knox.auth
 from django.contrib.auth import authenticate, login, logout
 from .forms import CreateUserForm, ProfileForm
 from django.core.files.storage import FileSystemStorage
@@ -100,7 +101,7 @@ def upload_book(request):
             return redirect('book_list')
     else:
         form = BookForm()
-    return render(request, 'upload_book.html', {
+    return render(request, 'profileapp/upload.html', {
         'form': form
     })
 

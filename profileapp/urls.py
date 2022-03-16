@@ -1,4 +1,5 @@
-from django.urls import path 
+import knox.auth
+from django.urls import path
 from .views import RegisterAPI
 from . import views
 from knox import views as knox_views
