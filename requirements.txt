@@ -9,3 +9,5 @@ paramiko==2.10.2
 cryptography==36.0.1
 Jinja2==3.0.1
 requests==2.25.1
+boto3==1.21.20
+psycopg2==2.9.1
